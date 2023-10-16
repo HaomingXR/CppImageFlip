@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Demo : MonoBehaviour
+public class FlipDemo : MonoBehaviour
 {
     [SerializeField]
     private Texture2D target;
@@ -11,7 +11,6 @@ public class Demo : MonoBehaviour
 
     void Start()
     {
-        Util.FlipTextureVertically(ref target);
-        showcase.texture = target;
+        showcase.texture = ImageFlip.FlipVertically(target);
     }
 }

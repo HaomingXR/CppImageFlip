@@ -1,14 +1,14 @@
 #include "pch.h"
 #include "Flip.h"
 
-void FlipImageVertically(unsigned char* imageData, int width, int height, int bytesPerPixel)
+void FlipImageVertically(unsigned char* imageData, unsigned int width, unsigned int height, unsigned char bytesPerPixel)
 {
     unsigned char* rowBuffer = new unsigned char[width * bytesPerPixel];
-    int halfHeight = height / 2;
+    unsigned int halfHeight = height / 2;
 
-    for (int row = 0; row < halfHeight; row++) {
-        int topRowIndex = row * width * bytesPerPixel;
-        int bottomRowIndex = (height - row - 1) * width * bytesPerPixel;
+    for (unsigned int row = 0; row < halfHeight; row++) {
+        unsigned int topRowIndex = row * width * bytesPerPixel;
+        unsigned int bottomRowIndex = (height - row - 1) * width * bytesPerPixel;
 
         // Swap top row with bottom row
         memcpy(rowBuffer, &imageData[topRowIndex], width * bytesPerPixel);

@@ -6,4 +6,4 @@
 #define FLIP_API __declspec(dllimport)
 #endif
 
-extern "C" FLIP_API void FlipImageVertically(unsigned char* imageData, int width, int height, int bytesPerPixel);
+extern "C" FLIP_API void FlipImageVertically(unsigned char* imageData, unsigned int width, unsigned int height, unsigned char bytesPerPixel);
